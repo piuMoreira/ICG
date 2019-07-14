@@ -65,24 +65,23 @@ void drawLine(Ponto *inicio, Ponto *final) {
 }
 ```
 
-O problema é que o Algoritmo de Bresenham consegue desenhar apenas retas que têm inclinação de 0º à 45º, ou seja, retas que estão no primeiro octante, a divisão dos octantes pode ser melhor entendida através da imagem abaixo.
+O problema é que o Algoritmo de Bresenham consegue desenhar apenas retas que têm inclinação de 0º à 45º, ou seja, retas que estão no primeiro octante. Uma reta criada a partir do algoritmo na sua forma original pode ser vista abaixo.
 
 <p align="center">
     <img src="/prints/primeiroOctante.jpg">
-![](/prints/primeiroOctante.jpg)
 </p>
 
-Esse problema pode ser contornado pois retas que se encontram nos demais octantes podem ser reduzidos ao primeiro, ou seja, é possível fazer variações do Algorítimo de Bresenham para se poder desenharem todos os octantes. Os aspectos matemáticos dos octantes odem ser vistos abaixo.
+Esse problema pode ser contornado pois retas que se encontram nos demais octantes podem ser reduzidos ao primeiro, ou seja, é possível fazer variações do Algorítimo de Bresenham para se poder rasterizar retas em todos os octantes. A posição dos octantes pode ser vista na imagem abaixo.
 
-
-![](/prints/octantes.png)
-
+<p align="center">
+    <img ="prints/octantes.png">
+</p>
 
 Com as variações implementadas é possível ter o resultado abaixo.
 
-
-![](/prints/oitoOctantes.jpg)
-
+<p align="center">
+    <img src="/prints/oitoOctantes.jpg">
+</p>
 
 ### Desenhando Triângulos
 
@@ -95,6 +94,6 @@ void drawTriangle(Ponto *p1, Ponto *p2, Ponto *p3) {
     drawLine(p3,p1);
 }
 ```
-
-
-![](/prints/triangulo.jpg)
+<p align="center">
+    <img src="/prints/triangulo.jpg">
+</p>
