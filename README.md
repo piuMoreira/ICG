@@ -8,7 +8,7 @@ primitives, described in terms of vertices on a
 Cartesian grid, by sets of pixels of the
 appropriate intensity of gray or color.” -- Foley et. al
 
-Implementaremos mais especificamente o Algoritmo de Bresenham; é um algoritmo incremental, ou seja, evita multiplicações e arredondamentos que deixam o trabalho da rasterização mais caro, alem disso o Algorimo de Bresenham pode ser generalizado para circulos. Abaixo é possível ver um exemplo do processo de raterização o Algoritmo de Bresenham.
+Implementaremos mais especificamente o Algoritmo de Bresenham; é um algoritmo incremental, ou seja, evita multiplicações e arredondamentos que deixam o trabalho da rasterização mais caro, alem disso o Algorimo de Bresenham pode ser generalizado para circulos. Abaixo é possível ver um exemplo do processo de rasterização o Algoritmo de Bresenham.
 
 ![](/prints/bresenham.jpg)
 
@@ -68,7 +68,7 @@ O problema é que o Algoritmo de Bresenham consegue desenhar retas que tem incli
 
 Esse problema pode ser contornado pois retas que se encontram nos demais octantes podem ser reduzidos ao primeiro, ou seja, é possível fazer variações do Algorítimo de Bresenham para se poder desenharem todos os octantes. Os aspectos matemáticos dos octantes odem ser vistos abaixo.
 
-ewgfwefw
+![](/prints/octantes.png)
 
 Com as variações implementadas é possível ter o resultado abaixo.
 
