@@ -25,7 +25,7 @@ void putPixel(Ponto *p) {
 }
 ```
 
-Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x,y) que se encontra, bem como um array de quanto possições chamado cor. Como a cor do pixel se dá pelo conjunto de 4 bytes cada um representando a intensidade de vermelhe, verde, azul e transparência, essa estrutura de repetição calcula o offset da posição de cada uma dessas componententes à partir do ponteiro do FrameBuffer e atribui a cada uma dessas componentes seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
+Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x,y) que se encontra, bem como um array de quatro possições chamado cor. Como a cor do pixel se dá pelo conjunto de 4 bytes cada um representando a intensidade de vermelhe, verde, azul e transparência, essa estrutura de repetição calcula o offset da posição de cada uma dessas componententes à partir do ponteiro do FrameBuffer e atribui a cada uma dessas componentes seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
 
 
 ![](/prints/putPixel.jpg)
