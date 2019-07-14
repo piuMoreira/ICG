@@ -82,7 +82,7 @@ Com as variações implementadas é possível ter o resultado abaixo.
 ![](/prints/oitoOctantes.jpg)
 
 
-### Desenhando Triângulo
+### Desenhando Triângulos
 
 Agora que podemos desenhar em todos os octantes, desenhar um triângulo não é mais uma tarefa difícil, como se pode ver abaixo.
 
