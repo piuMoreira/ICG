@@ -8,14 +8,14 @@ primitives, described in terms of vertices on a
 Cartesian grid, by sets of pixels of the
 appropriate intensity of gray or color.” -- Foley et. al
 
-Implementaremos mais especificamente o Algoritmo de Bresenham; é um algoritmo incremental, ou seja, evita multiplicações e arredondamentos que deixam o trabalho da rasterização mais caro, alem disso o Algorimo de Bresenham pode ser generalizado para circulos. Abaixo é possível ver um exemplo do processo de rasterização o Algoritmo de Bresenham.
+Implementaremos mais especificamente o Algoritmo de Bresenham. Este é um algoritmo incremental para rasterização de linhas, ou seja, evita multiplicações e arredondamentos que deixam o trabalho da rasterização mais caro, além disso o Algorimo de Bresenham pode ser generalizado para círculos. Abaixo é possível ver um exemplo do processo de rasterização o Algoritmo de Bresenham.
 
 <p align="center">
     <img src="/prints/bresenham.jpg">
 </p>
 
 ### Raterizando pontos
-A raterização de um ponto na nossa implementação se dá por:
+A raterização de um ponto na nossa implementação se dá pela função abaixo:
 
 ```c
 void putPixel(Ponto *p) {
@@ -25,15 +25,15 @@ void putPixel(Ponto *p) {
 }
 ```
 
-Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x,y) que se encontra, bem como um array de quatro possições chamado cor. Como a cor do pixel se dá pelo conjunto de 4 bytes cada um representando a intensidade de vermelhe, verde, azul e transparência, essa estrutura de repetição calcula o offset da posição de cada uma dessas componententes à partir do ponteiro do FrameBuffer e atribui a cada uma dessas componentes seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
+Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x, y) do pixel, bem como um array de quatro posições chamado cor. Como a cor de cada pixel se dá pelo conjunto de 4 bytes, onde o primeiro, segundo, terceiro e quarto byte representam a intensidade de vermelho, verde, azul e o nível de transparência, respectivamente, essa estrutura de repetição calcula o offset da posição de cada uma dessas componententes a partir do ponteiro do FrameBuffer (FBptr) e atribui a cada uma delas o seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
 
-
-![](/prints/putPixel.jpg)
-
+<p align="center">
+    <img src="/prints/putPixel.jpg">
+</p>
 
 ### Rasterizando Linhas
 
-O Algoritmo de Bresenham é um algoritmo incremental, ou seja, ele faz adicições de inteiros para calcular os locais onde deve desenhar os pontos afim de se obter a representação da primitiva matemática através de pixels. Abaixo é possível ver esse algoritmo.
+O Algoritmo de Bresenham é um algoritmo incremental, ou seja, ele faz adições de inteiros para calcular os locais onde deve desenhar os pontos afim de se obter a representação da primitiva matemática através de pixels. O código do algoritmo é apresentado abaixo.
 
 ```c
 void drawLine(Ponto *inicio, Ponto *final) {
@@ -65,11 +65,12 @@ void drawLine(Ponto *inicio, Ponto *final) {
 }
 ```
 
-O problema é que o Algoritmo de Bresenham consegue desenhar retas que tem inclinação de 0º à 45º, ou seja, retas que estão no primeiro octante, como é possivel ver abaixo.
+O problema é que o Algoritmo de Bresenham consegue desenhar apenas retas que têm inclinação de 0º à 45º, ou seja, retas que estão no primeiro octante, a divisão dos octantes pode ser melhor entendida através da imagem abaixo.
 
-
+<p align="center">
+    <img src="/prints/primeiroOctante.jpg">
 ![](/prints/primeiroOctante.jpg)
-
+</p>
 
 Esse problema pode ser contornado pois retas que se encontram nos demais octantes podem ser reduzidos ao primeiro, ou seja, é possível fazer variações do Algorítimo de Bresenham para se poder desenharem todos os octantes. Os aspectos matemáticos dos octantes odem ser vistos abaixo.
 
