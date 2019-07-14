@@ -10,8 +10,9 @@ appropriate intensity of gray or color.” -- Foley et. al
 
 Implementaremos mais especificamente o Algoritmo de Bresenham; é um algoritmo incremental, ou seja, evita multiplicações e arredondamentos que deixam o trabalho da rasterização mais caro, alem disso o Algorimo de Bresenham pode ser generalizado para circulos. Abaixo é possível ver um exemplo do processo de rasterização o Algoritmo de Bresenham.
 
+<p align="center">
 ![](/prints/bresenham.jpg)
-
+</p>
 
 ### Raterizando pontos
 A raterização de um ponto na nossa implementação se dá por:
