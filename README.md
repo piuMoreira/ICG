@@ -26,6 +26,7 @@ void putPixel(Ponto *p) {
 
 Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x,y) que se encontra, bem como um array de quanto possições chamado cor. Como a cor do pixel se dá pelo conjunto de 4 bytes cada um representando a intensidade de vermelhe, verde, azul e transparência, essa estrutura de repetição calcula o offset da posição de cada uma dessas componententes à partir do ponteiro do FrameBuffer e atribui a cada uma dessas componentes seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
 
+
 ![](/prints/putPixel.jpg)
 
 
@@ -64,15 +65,22 @@ void drawLine(Ponto *inicio, Ponto *final) {
 ```
 
 O problema é que o Algoritmo de Bresenham consegue desenhar retas que tem inclinação de 0º à 45º, ou seja, retas que estão no primeiro octante, como é possivel ver abaixo.
+
+
 ![](/prints/primeiroOctante.jpg)
+
 
 Esse problema pode ser contornado pois retas que se encontram nos demais octantes podem ser reduzidos ao primeiro, ou seja, é possível fazer variações do Algorítimo de Bresenham para se poder desenharem todos os octantes. Os aspectos matemáticos dos octantes odem ser vistos abaixo.
 
+
 ![](/prints/octantes.png)
+
 
 Com as variações implementadas é possível ter o resultado abaixo.
 
+
 ![](/prints/oitoOctantes.jpg)
+
 
 ### Desenhando Triângulo
 
@@ -85,4 +93,6 @@ void drawTriangle(Ponto *p1, Ponto *p2, Ponto *p3) {
     drawLine(p3,p1);
 }
 ```
+
+
 ![](/prints/triangulo.jpg)
