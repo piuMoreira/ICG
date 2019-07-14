@@ -74,7 +74,7 @@ O problema é que o Algoritmo de Bresenham consegue desenhar apenas retas que t�
 Esse problema pode ser contornado pois retas que se encontram nos demais octantes podem ser reduzidos ao primeiro, ou seja, é possível fazer variações do Algorítimo de Bresenham para se poder rasterizar retas em todos os octantes. A posição dos octantes pode ser vista na imagem abaixo.
 
 <p align="center">
-    <img ="prints/octantes.png">
+    <img ="/prints/octantes.png">
 </p>
 
 Com as variações implementadas é possível ter o resultado abaixo.
