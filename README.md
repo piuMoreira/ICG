@@ -12,7 +12,6 @@ Implementaremos mais especificamente o Algoritmo de Bresenham; é um algoritmo i
 
 <p align="center">
     <img src="/prints/bresenham.jpg">
-![](/prints/bresenham.jpg)
 </p>
 
 ### Raterizando pontos
