@@ -1,7 +1,8 @@
 # ICG
 
 ### Introdução
-Este repositório é destinado à implementação de algorítmos de raterização. Mas o que é rasterização? 
+
+Este repositório é destinado a implementação do algoritmo para rasterização de linhas desenvolvido pelo cientista da computação, Jack Elton Bresenham. Mas o que é rasterização? 
 
 “Approximation of mathematical ('ideal')
 primitives, described in terms of vertices on a
@@ -25,7 +26,7 @@ void putPixel(Ponto *p) {
 }
 ```
 
-Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x, y) do pixel, bem como um array de quatro posições chamado cor. Como a cor de cada pixel se dá pelo conjunto de 4 bytes, onde o primeiro, segundo, terceiro e quarto byte representam a intensidade de vermelho, verde, azul e o nível de transparência, respectivamente, essa estrutura de repetição calcula o offset da posição de cada uma dessas componententes a partir do ponteiro do FrameBuffer (FBptr) e atribui a cada uma delas o seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
+Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x, y) do pixel, bem como um array de quatro posições chamado cor. Como a cor de cada pixel se dá pelo conjunto de 4 bytes, onde o primeiro, segundo, terceiro e quarto byte representam a intensidade de vermelho, verde, azul e o nível de transparência, respectivamente, essa estrutura de repetição calcula o offset da posição de cada uma dessas componentes a partir do ponteiro do FrameBuffer (FBptr) e atribui a cada uma delas o seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
 
 <p align="center">
     <img src="/prints/putPixel.jpg">
@@ -100,7 +101,7 @@ void drawTriangle(Ponto *p1, Ponto *p2, Ponto *p3) {
 
 ### Conclusão
 
-O Algoritmo de Bresenham é um algoritmo utilizado para rasterizar retas de maneira eficiente sem a necessidade de operações custosas computacionalmente como operações com plontos flututantes e divisões. Foi desenvolvido através de uma análise matemática profunda das características de retas alida aos conhecimentos da estrutura dos monitores formados por pixels de Jack Elton Bresenham.
+O Algoritmo de Bresenham é um algoritmo utilizado para rasterizar retas de maneira eficiente sem a necessidade de operações custosas computacionalmente como operações com plontos flututantes e divisões. Foi desenvolvido através de uma análise matemática profunda das características das retas alida aos conhecimentos da estrutura dos monitores formados por pixels de Jack Elton Bresenham.
 
 ### Bibliografia
 
