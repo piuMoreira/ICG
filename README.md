@@ -2,14 +2,14 @@
 
 ### Introdução
 
-Este repositório é destinado a implementação do algoritmo para rasterização de linhas desenvolvido pelo cientista da computação, Jack Elton Bresenham. Mas o que é rasterização? 
+Este repositório é destinado a implementação de um algoritmo para rasterização passado como primeiro trabalho da disciplina de Introdução À Computação Gráfica ministrada pelo Profº Christian A. Pagot no semestre 2019.1 da Universidade Federal da Paraíba. Mas o que é rasterização? 
 
 “Approximation of mathematical ('ideal')
 primitives, described in terms of vertices on a
 Cartesian grid, by sets of pixels of the
 appropriate intensity of gray or color.” -- Foley et. al
 
-Implementaremos mais especificamente o Algoritmo de Bresenham. Este é um algoritmo incremental para rasterização de linhas, ou seja, evita multiplicações e arredondamentos que deixam o trabalho da rasterização mais caro, além disso o Algorimo de Bresenham pode ser generalizado para círculos. Abaixo é possível ver um exemplo do processo de rasterização o Algoritmo de Bresenham.
+Implementaremos mais especificamente o Algoritmo de Bresenham. Este é um algoritmo incremental para rasterização de linhas, ou seja, evita multiplicações e arredondamentos que deixam o trabalho da rasterização mais caro, além disso ele também pode ser generalizado para círculos. Abaixo é possível ver um exemplo do processo de rasterização o Algoritmo de Bresenham.
 
 <p align="center">
     <img src="/prints/bresenham.jpg">
