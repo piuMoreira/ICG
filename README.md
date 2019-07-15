@@ -14,7 +14,7 @@ Implementaremos mais especificamente o Algoritmo de Bresenham. Este é um algori
     <img src="/prints/bresenham.jpg">
 </p>
 
-### Raterizando pontos
+### Raterizando Pontos
 A raterização de um ponto na nossa implementação se dá pela função abaixo:
 
 ```c
@@ -97,3 +97,14 @@ void drawTriangle(Ponto *p1, Ponto *p2, Ponto *p3) {
 <p align="center">
     <img src="/prints/triangulo.jpg">
 </p>
+
+### Conclusão
+
+O Algoritmo de Bresenham é um algoritmo utilizado para rasterizar retas de maneira eficiente sem a necessidade de operações custosas computacionalmente como operações com plontos flututantes e divisões. Foi desenvolvido através de uma análise matemática profunda das características de retas alida aos conhecimentos da estrutura dos monitores formados por pixels de Jack Elton Bresenham.
+
+### Bibliografia
+
+<ul>
+    <li>http://letslearnbits.blogspot.com/2014/10/icgt1-interpolacao-de-cores.html</li>
+    <li>https://medium.com/@raullesteves/github-como-fazer-um-readme-md-bonit%C3%A3o-c85c8f154f8</li>
+</ul>
