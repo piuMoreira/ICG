@@ -101,11 +101,12 @@ void drawTriangle(Ponto *p1, Ponto *p2, Ponto *p3) {
 
 ### Conclusão
 
-O Algoritmo de Bresenham é um algoritmo utilizado para rasterizar retas de maneira eficiente sem a necessidade de operações custosas computacionalmente como operações com plontos flututantes e divisões. Foi desenvolvido através de uma análise matemática profunda das características das retas alida aos conhecimentos da estrutura dos monitores formados por pixels de Jack Elton Bresenham.
+Com base no que foi apresentado, destacamos a importância deste algoritmo para a área da computação gráfica por possibilitar a rasterização de primitivas através de operações computacionalmente mais baratas dos que os métodos utilizados até então. Durante sua implementação encontramos dificuldades para organizar o código de maneira legível e bem estruturada, visto que são oito octantes e por isso são necessárias oito versões do algoritmo. Além disso, tivemos certa dificuldade para generalizar o algoritmo para todos os octantes.
 
 ### Bibliografia
 
 <ul>
+    <li>Slides utilizados pelo professor durante as aulas.</li>
     <li>http://letslearnbits.blogspot.com/2014/10/icgt1-interpolacao-de-cores.html</li>
     <li>https://medium.com/@raullesteves/github-como-fazer-um-readme-md-bonit%C3%A3o-c85c8f154f8</li>
 </ul>
