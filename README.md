@@ -15,8 +15,8 @@ Implementaremos mais especificamente o Algoritmo de Bresenham. Este é um algori
     <img src="/prints/bresenham.jpg">
 </p>
 
-### Raterizando Pontos
-A raterização de um ponto na nossa implementação se dá pela função abaixo:
+### Rasterizando Pontos
+A rasterização de um ponto na nossa implementação se dá pela função abaixo:
 
 ```c
 void putPixel(Ponto *p) {
@@ -26,7 +26,7 @@ void putPixel(Ponto *p) {
 }
 ```
 
-Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x, y) do pixel, bem como um array de quatro posições chamado cor. Como a cor de cada pixel se dá pelo conjunto de 4 bytes, onde o primeiro, segundo, terceiro e quarto byte representam a intensidade de vermelho, verde, azul e o nível de transparência, respectivamente, essa estrutura de repetição calcula o offset da posição de cada uma dessas componentes a partir do ponteiro do FrameBuffer (FBptr) e atribui a cada uma delas o seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
+Na função acima vemos que putPixel recebe um dado do tipo Ponto, essa estrutura possui dois inteiros que repesentam a posição (x, y) do pixel, bem como um array de quatro posições chamado cor. Como a cor de cada pixel se dá pelo conjunto de 4 bytes, onde cada um representa a intensidade de vermelho, verde, azul e o nível de transparência, respectivamente, essa estrutura de repetição calcula o offset da posição de cada uma dessas componentes do pixel a partir do ponteiro do FrameBuffer (FBptr) e atribui a cada uma delas o seu respectivo valor definido no parâmetro cor do Ponto. Abaixo é possível ver um exemplo da utilização dessa função.
 
 <p align="center">
     <img src="/prints/putPixel.jpg">
@@ -101,7 +101,7 @@ void drawTriangle(Ponto *p1, Ponto *p2, Ponto *p3) {
 
 ### Conclusão
 
-Com base no que foi apresentado, destacamos a importância deste algoritmo para a área da computação gráfica por possibilitar a rasterização de primitivas através de operações computacionalmente mais baratas dos que os métodos utilizados até então. Durante sua implementação encontramos dificuldades para organizar o código de maneira legível e bem estruturada, visto que são oito octantes e por isso são necessárias oito versões do algoritmo. Além disso, tivemos certa dificuldade para generalizar o algoritmo para todos os octantes.
+Com base no que foi apresentado, destacamos a importância deste algoritmo para a área da computação gráfica por possibilitar a rasterização de primitivas matemáticas através de operações computacionalmente mais baratas dos que os métodos utilizados até então. Durante sua implementação encontramos dificuldades para organizar o código de maneira legível e bem estruturada, visto que são oito octantes e por isso é preciso generalizar o código para cada um deles. Além disso tivemos que buscar informações sobre a interpolação de cores para deixar as retas com esse efeito que é visto acima.
 
 ### Bibliografia
 
